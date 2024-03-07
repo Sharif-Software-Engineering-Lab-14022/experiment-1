@@ -1,5 +1,5 @@
 # Experiment 1
-It's the first experiment of Software Engineering Lab course in Spring 204 at Sharif University of Technology.
+It's the first experiment of Software Engineering Lab course in Spring 2024 at Sharif University of Technology.
 
 # Getting Started with Create React App
 
