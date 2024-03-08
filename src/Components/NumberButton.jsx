@@ -1,4 +1,3 @@
-
 const NumberButton = ({number, currentOperandSetter, customClasses}) => {
     return (
         <button
