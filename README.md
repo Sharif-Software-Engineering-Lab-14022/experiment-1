@@ -49,3 +49,8 @@ It's the first experiment of Software Engineering Lab course in Spring 2024 at S
 
 - این مورد یک مرحله بین workspace و repository است که کار اصلی آن set up و ترکیب کردن تمام تغییراتی است که تا آن لحظه داده شده تا آن‌ها آماده‌ی commit شدن در repository شوند. ([منبع](https://www.geeksforgeeks.org/git-index))
 -  از این دستور برای ذخیره کردن تغییرات commit نشده (staged و unstaged) استفاده می‌کنیم. سپس پروژه به آخرین commit بازمی‌گردد. حال می‌توانیم کار دلخواهمان را انجام دهیم و در نهایت تغییر ذخیره شده را pop کنیم (همانند stack عمل می‌کند.) و آن تغییرات به روی پروژه‌ی حاضر، اعمال شوند. ([منبع](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+
+## 6
+### مفهوم snapshot به چه معناست؟ ارتباط آن با commit چیست؟ (راهنمایی: [لینک](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs))
+
+مفهوم snapshot یعنی یک state خاص وضعیت از پروژه. با توجه به این تعریف، هر commit یک snapshot است.
