@@ -51,7 +51,7 @@ const Calculator = () => {
                             setCurrentOperand(currentOperandString.slice(0, -1))
                     }}
                     className="flex item-center justify-center bg-gray-300 hover:bg-gray-400 p-4 rounded-[10px] text-xl">
-                    CA
+                    C
                 </button>
                 {['/', 7, 8, 9, '*', 4, 5, 6, '-', 1, 2, 3, '+'].map(el =>
                     typeof el === 'number'
