@@ -1,73 +1,16 @@
 # Experiment 1
 It's the first experiment of Software Engineering Lab course in Spring 2024 at Sharif University of Technology.
 
-# Getting Started with Create React App
+# Questions
+## 1
+پوشه‌ی git. یک پوشه‌ی مخفی است که در هر مخزن گیت وجود دارد. این پوشه هسته مخزن گیت است و تمام اطلاعات متادیتا و پیکربندی لازم برای کنترل نسخه را شامل می‌شود. موارد زیر معمولاً درون پوشه‌ی git. وجود دارند که عبارتند از:
+1. **پیکربندی مخزن:** تنظیمات پیکربندی مانند جزئیات کاربر، ایمیل، شاخه پیش‌فرض و غیره در فایل git/config. ذخیره می‌شوند.
+2. **پایگاه داده‌ی آبجکت:** گیت تمام بازبینی‌های فایل و اسناد را به صورت آبجکت بطور فشرده در دایرکتوری git/objects. ذخیره می‌کند. در اینجا داده‌های واقعی فایل‌ها قرار دارد.
+3. **شاخه‌ها:** اطلاعات مربوط به شاخه‌ها و نسخه‌های آن‌ها در دایرکتوری git/refs/heads. ذخیره می‌شود.
+4. **برچسب‌ها:** مراجع برچسب‌ها در دایرکتوری git/refs/tags. ذخیره می‌شوند.
+5. **اندیس:** منطقه staging، همچنین با نام index شناخته می‌شود، در git/index. ذخیره می‌شود. در اینجا گیت تغییراتی که برای کامیت آماده هستند را نگهداری می‌کند.
+6. **تاریخچه‌ی کامیت:** تاریخچه‌ی کامیت در دایرکتوری git/logs. ذخیره می‌شود، به‌ویژه در فایل‌هایی مانند HEAD و <refs/heads/<branch.
+7. **هوک‌ها:** هوک‌های گیت که اسکریپت‌هایی هستند که در نقاط مشخصی از جریان کار گیت اجرا می‌شوند، در دایرکتوری git/hooks. ذخیره می‌شوند.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+برای ایجاد یک مخزن گیت و ایجاد پوشه‌ی git.، معمولاً از دستور git init استفاده می‌شود.
+این دستور یک مخزن گیت جدید را در دایرکتوری فعلی مقداردهی اولیه می‌کند و پوشه‌ی git. را به همراه فایل‌ها و دایرکتوری‌های لازم در داخل آن ایجاد می‌کند.
