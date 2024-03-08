@@ -21,6 +21,8 @@ It's the first experiment of Software Engineering Lab course in Spring 2024 at S
 ### مستقرسازی:
 ابتدا با استفاده از دستور `gh-pages` برنامه را در GitHub Pages مستقر کردیم و سپس برای راه‌اندازی CD، از GitHub Actions استفاده کردیم که فایل مربوط به آن در `github/workflows/deployment.yml.` موجود است. در آن ابتدا به ازای هر push، آن action اجرا می‌شود و سپس مراحل deploy طی می‌شود.
 
+[منبع ۱](https://blog.logrocket.com/deploying-react-apps-github-pages)، [منبع ۲](https://www.youtube.com/watch?v=5I37iVCDUTU)
+
 ### سایر جزئیات:
 - شاخه‌ی main همان‌طور که گفته شد، محافظت شده است. این کار از طریق منوی `Settings -> Branches` انجام شده است.
 - تمام کارهای کد با استفاده از Pull Request مدیریت شده‌اند.
