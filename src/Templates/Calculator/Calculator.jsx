@@ -34,6 +34,17 @@ const Calculator = () => {
                     AC
                 </button>
                 <button
+                    onClick={() => {
+                        if (currentOperand === undefined)
+                            return
+
+
+                        const currentOperandString = currentOperand.toString()
+                        if (currentOperandString.length === 1)
+                            setCurrentOperand('0')
+                        else
+                            setCurrentOperand(currentOperandString.slice(0, -1))
+                    }}
                     className="flex item-center justify-center bg-gray-300 hover:bg-gray-400 p-4 rounded-[10px] text-xl">
                     C
                 </button>
