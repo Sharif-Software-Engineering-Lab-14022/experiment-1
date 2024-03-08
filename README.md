@@ -1,73 +1,60 @@
 # Experiment 1
 It's the first experiment of Software Engineering Lab course in Spring 2024 at Sharif University of Technology.
 
-# Getting Started with Create React App
+# Questions
+## 1
+### پوشه‌ی git. چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+پوشه‌ی git. یک پوشه‌ی مخفی است که در هر مخزن گیت وجود دارد. این پوشه هسته مخزن گیت است و تمام اطلاعات متادیتا و پیکربندی لازم برای کنترل نسخه را شامل می‌شود. موارد زیر معمولاً درون پوشه‌ی git. وجود دارند که عبارتند از:
+1. **پیکربندی مخزن (repository configuration):** تنظیمات پیکربندی مانند جزئیات کاربر، ایمیل، شاخه پیش‌فرض (default branch) و غیره در فایل git/config. ذخیره می‌شوند.
+2. **پایگاه داده‌ی آبجکت:** گیت تمام بازبینی‌های فایل و اسناد را به صورت آبجکت بطور فشرده در دایرکتوری git/objects. ذخیره می‌کند. در اینجا داده‌های واقعی فایل‌ها قرار دارد.
+3. **شاخه‌ها:** اطلاعات مربوط به شاخه‌ها و نسخه‌های آن‌ها در دایرکتوری git/refs/heads. ذخیره می‌شود.
+4. **برچسب‌ها (tags):** مراجع برچسب‌ها در دایرکتوری git/refs/tags. ذخیره می‌شوند.
+5. **اندیس (index):** منطقه staging، همچنین با نام index شناخته می‌شود، در git/index. ذخیره می‌شود. در اینجا گیت تغییراتی که برای کامیت آماده هستند را نگهداری می‌کند.
+6. **تاریخچه‌ی کامیت:** تاریخچه‌ی کامیت در دایرکتوری git/logs. ذخیره می‌شود، به‌ویژه در فایل‌هایی مانند HEAD و <refs/heads/<branch.
+7. **هوک‌ها:** هوک‌های گیت که اسکریپت‌هایی هستند که در نقاط مشخصی از جریان کار گیت اجرا می‌شوند، در دایرکتوری git/hooks. ذخیره می‌شوند.
 
-## Available Scripts
+برای ایجاد یک مخزن گیت و ایجاد پوشه‌ی git.، معمولاً از دستور git init استفاده می‌شود.
+این دستور یک مخزن گیت جدید را در دایرکتوری فعلی مقداردهی اولیه می‌کند و پوشه‌ی git. را به همراه فایل‌ها و دایرکتوری‌های لازم در داخل آن ایجاد می‌کند.
 
-In the project directory, you can run:
+## 2
+### منظور از atomic بودن در atomic commit و atomic pull-request چیست؟
 
-### `npm start`
+در گیت، واژه‌ی "اتمی" به مفهوم این است که یک عملیات غیرقابل تجزیه و تفکیک است.
+- مفهوم **Atomic Commit:** به معنای این است که تمام تغییرات مرتبط با یک وظیفه یا ویژگی خاص به عنوان یک واحد تکی کامیت می‌شوند. این اطمینان را به ما می‌دهد که یا تمام تغییرات با موفقیت اعمال می‌شوند یا هیچ کدام از آن‌ها. Atomic Commit به حفظ تاریخچه‌ی تمیز و منطقی در سیستم کنترل نسخه کمک می‌کند و این باعث می‌شود تا درک تکامل پایگاه کد در طول زمان آسان‌تر شود.
+- مفهوم **Atomic Pull Request:** شامل تمام تغییرات لازم برای اجرای یک ویژگی خاص یا رفع یک باگ است و یک واحد کاری یکپارچه را نمایان می‌کند. Atomic Pull Request به این معناست که تغییرات غیرمرتبط یا ویژگی‌های ناتمام را شامل نمی‌شود. این باعث می‌شود که فرآیند بررسی قابل مدیریت‌تر شود، زیرا بازبینان (reviewers) می‌توانند بر روی ارزیابی یک مجموعه تغییرات منسجم، تمرکز کنند.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+در هر دو مورد، واژه "Atomic" بر این تاکید می‌کند که عملیات باید مستقل و سازگار باشد، بدون تغییرات جزئی یا ناتمام. این روش، همکاری (collaboration) و قابلیت ادامه کار در جریان‌های کاری (workflows) توسعه نرم‌افزار را ترویج می‌کند.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 3
+### تفاوت دستورهای fetch و pull و merge و rebase و cherry-pick را بیان کنید.
 
-### `npm test`
+- دستور **fetch:** تغییرات جدید را از یک مخزن از راه دور دانلود می‌کند بدون ادغام آن‌ها به شاخه‌های محلی. این دستور، کپی محلی از شاخه‌های ریموت را به‌روزرسانی می‌کند، امکان مشاهده آنچه که سایر توسعه‌دهندگان در حال کار بر روی آن هستند را فراهم می‌کند. این دستور working directory یا شاخه‌های محلی را تغییر نمی‌دهد؛ فقط remote tracking branches در مخزن را به‌روز می‌کند.
+- دستور **pull:** تغییرات را از یک مخزن ریموت بارگیری می‌کند و سپس آن‌ها را در شاخه محلی فعلی ادغام می‌کند. این اساساً یک ترکیب از git fetch و سپس git merge است. این دستور شاخه فعلی شما را با آخرین تغییرات از مخزن ریموت به‌روز می‌کند و به‌طور خودکار آن‌ها را در working directory ادغام می‌کند.
+- دستور **merge:** تغییرات از یک شاخه را در شاخه دیگری ترکیب می‌کند. یک کامیت جدید ایجاد می‌کند که تغییرات از شاخه مشخص شده را در شاخه فعلی ترکیب می‌کند. مرج کردن یک راه متداول برای ادغام تغییرات از یک شاخه (مانند یک شاخه فیچر) به شاخه دیگری (مانند شاخه اصلی) است.
+- دستور **rebase:** کامیت‌ها را از یک شاخه به شاخه دیگر منتقل یا بازنویسی می‌کند. پایه برنچ را به یک کامیت متفاوت، معمولاً آخرین کامیت برنچ دیگر، تغییر می‌دهد. این دستور برای حفظ تاریخچه کامیت تمیز و خطی مفید است، زیرا از ایجاد کامیت‌های مرج غیرضروری جلوگیری می‌کند. با این حال، باید با احتیاط استفاده شود، به ویژه در شاخه‌های مشترک، زیرا تاریخچه کامیت را بازنویسی می‌کند که ممکن است باعث بروز تضاد برای ایجادکنندگان دیگر شود.
+- دستور **cherry-pick:** یک کامیت تکی از یک شاخه را انتخاب کرده و بر روی شاخه دیگری اعمال می‌کند. این دستور این امکان را می‌دهد تا کامیت‌های خاص را انتخاب کنیم بدون ادغام کل شاخه‌ها. این دستور برای اعمال اصلاحات باگ یا بهبود فیچر از یک شاخه به شاخه دیگر مفید است، به ویژه زمانی که نمی‌خواهیم کل شاخه را ادغام کنید.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4
+### تفاوت دستورهای reset و revert و restore و switch و checkout را بیان کنید.
 
-### `npm run build`
+- دستور **reset:** این دستور وقتی استفاده می‌شود که می‌خواهیم repository را به یک commit خاص برگردانیم و از تمام تغییرات بعد از آن چشم‌پوشی کنیم. ([منبع](https://www.w3schools.com/git/git_reset.asp?remote=github)) 
+- دستور **revert:** در این دستور نیز نتیجه‌ی نهایی به نوعی است که انگار به یک commit خاص برگشته‌ایم. در دستور reset بخش قبل، HEAD و branch ref pointers به همان commit مشخص شده برمی‌گردند ولی در دستور revert، آن‌ها به commit مشخص شده برنمی‌گردند بلکه گیت تلاش می‌کند تا تغییرات از commit مشخص شده تا الآن را به نوعی reverse کند و مجموعه‌ی تمام آن‌ها را در قالب یک commit **جدید** قرار دهد. در نهایت HEAD و branch ref pointers به commit جدید اشاره می‌کنند که انتهای branch است. ([منبع](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert))
+- دستور **restore:** به طور پیش‌فرض با استفاده از این دستور، آخرین کامیت بازمی‌گردد و تمام تغییراتِ پس از آن (که کامیت نشده‌اند) پاک می‌شود. اگر به همراه این دستور از `staged--` نیز استفاده کنیم، آخرین فایل‌های stage شده، unstage می‌شوند و به عبارتی این کار برعکس دستور `add` است. ([منبع](https://www.educative.io/answers/what-are-the-reset-restore-and-revert-commands-in-git)) 
+- دستور **switch:** برای جابه‌جایی بین branchها استفاده می‌شود. به عبارتی با استفاده از این دستور می‌توانیم HEAD branch را تغییر دهیم. ([منبع](https://www.git-tower.com/learn/git/commands/git-switch)) 
+- دستور **checkout:** برای جابه‌جایی بین branchها استفاده می‌شود. به عبارتی با استفاده از این دستور می‌توانیم HEAD branch را تغییر دهیم. ولی با این دستور برخلاف switch، کارهای دیگری نیز می‌توان انجام داد همچون حذف تغییرات، restore کردن فایل‌ها و .... با استفاده از دستور switch که به نوعی خاص منظوره شده است، تنها می‌توان درست کردن و تغییر branch را انجام داد. ([منبع](https://www.git-tower.com/learn/git/commands/git-switch)) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5
+### منظور از stage یا همان index چیست؟ دستور stash چه کاری را انجام می‌دهد؟
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- این مورد یک مرحله بین workspace و repository است که کار اصلی آن set up و ترکیب کردن تمام تغییراتی است که تا آن لحظه داده شده تا آن‌ها آماده‌ی commit شدن در repository شوند. ([منبع](https://www.geeksforgeeks.org/git-index))
+-  از این دستور برای ذخیره کردن تغییرات commit نشده (staged و unstaged) استفاده می‌کنیم. سپس پروژه به آخرین commit بازمی‌گردد. حال می‌توانیم کار دلخواهمان را انجام دهیم و در نهایت تغییر ذخیره شده را pop کنیم (همانند stack عمل می‌کند.) و آن تغییرات به روی پروژه‌ی حاضر، اعمال شوند. ([منبع](https://www.atlassian.com/git/tutorials/saving-changes/git-stash))
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 6
+### مفهوم snapshot به چه معناست؟ ارتباط آن با commit چیست؟ (راهنمایی: [لینک](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs))
 
-### `npm run eject`
+مفهوم snapshot یعنی یک state خاص وضعیت از پروژه. با توجه به این تعریف، هر commit یک snapshot است.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 7
+### تفاوت‌های local repository و remote repository چیست؟
+خود remote repository به روی یک محیط مشترک که اعضای تیم ایجاد به آن دسترسی دارند، قرار گرفته است، برای مثال ابر، GitHub، سرور خود شرکت یا ... در حالی که local repository به روی دستگاه هر عضو تیم به صورت جداگانه و local قرار دارد. عملاً برای همکاری با اعضای تیم، نیاز به یک remote repository است ولی وقتی یک نفر تنهایی به روی یک پروژه کار می‌کند، نیازی به remote repository ندارد. ([منبع](https://nulab.com/learn/software-development/git-tutorial/git-basics/repositories/remote-repositories-vs-local-repositories)) 
