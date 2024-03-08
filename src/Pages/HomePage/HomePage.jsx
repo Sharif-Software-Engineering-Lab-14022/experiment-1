@@ -1,6 +1,6 @@
 import {MainLayout} from "../../Layouts"
 import {Calculator} from "../../Templates";
-import GitHubLogo from "../../../public/github-logo.svg";
+import GitHubLogo from "./github-logo.svg";
 
 function HomePage() {
     return <MainLayout>
