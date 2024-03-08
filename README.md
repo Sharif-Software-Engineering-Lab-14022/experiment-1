@@ -2,6 +2,21 @@
 It's the first experiment of Software Engineering Lab course in Spring 2024 at Sharif University of Technology.
 
 ## Report
+### مقدمه
+در این پروژه ما از GitHub به عنوان remote repository استفاده می‌کنیم. تصمیم گرفتیم این پروژه را پیاده‌سازی یک ماشین حساب ساده با استفاده از ReactJS Framework در نظر بگیریم. همچنین طبق اصول مهندسی نرم‌افزار، ما فایل gitignore. را با مواردی همچون node_modules/ (بسته‌های استفاده شده در کد front که مجموع آن‌ها حجم بالایی دارد و آپلود آن در remote repository منطقی نیست و به راحتی با استفاده از دستور `npm i` قابل نصب هستند.) و DS_Store. (معمولاً در directoryهای مک موجود هستند.) کامل کردیم. برای بهتر initialize کردن آن، از templateهای موجود در اینترنت همچون انواع سیستم عامل و نوع کد (front) بهره بردیم.
+
+### پیاده‌سازی
+همان‌طور که در روال انجام آزمایش گفته شده است، ما برای پیاده‌سازی این پروژه از حداقل ۲۰ commit معنادار استفاده کرده‌ایم که در repository قابل مشاهده است. همچنین از branchهای زیر استفاده کرده‌ایم:
+- شاخه‌ی **AmirMohammadFakhimi/feature/logic**: پیاده‌سازی logic ماشین حساب از جمله انواع عملیات‌های حسابی.
+- شاخه‌ی **AmirMohammadFakhimi/feature/answering-questions**: پاسخ به سؤالات موجود در دستور کار آزمایش.
+- شاخه‌ی **AmirMohammadFakhimi/feature/report**: نوشتن گزارش آزمایش.
+- شاخه‌ی **MohammadAminLotfi/fix/change-title**: تغییر header و footer ماشین حساب برای ایجاد conflict.
+- شاخه‌ی **hotfix**: برطرف کردن سریع باگ‌های کوچک.
+- شاخه‌ی **gh-pages**:
+
+### رفع conflict:
+1. برای اولین مورد، ما یک شاخه‌ی جدید از شاخه‌ی main ساختیم و اسم آن را `MohammadAminLotfi/fix/change-title` گذاشتیم. سپس یک شاخه‌ی دیگر از main ایجاد کردیم و اسم آن را `AmirMohammadFakhimi/feature/logic` گذاشتیم.  در هر دوی این شاخه‌ها header و footer را تغییر دادیم. در نهایت ابتدا `MohammadAminLotfi/fix/change-title` را با شاخه‌ی اصلی (main) merge کردیم (بدون conflict). سپس خواستیم `AmirMohammadFakhimi/feature/logic` را نیز  با شاخه‌ی اصلی (main) merge کنیم که به conflict خوردیم و آن را resolve کردیم.
+2. ...
 
 ## Questions
 ### 1
