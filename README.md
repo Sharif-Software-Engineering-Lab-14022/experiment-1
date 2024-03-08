@@ -12,14 +12,14 @@ It's the first experiment of Software Engineering Lab course in Spring 2024 at S
 - شاخه‌ی **AmirMohammadFakhimi/feature/report**: نوشتن گزارش آزمایش.
 - شاخه‌ی **MohammadAminLotfi/fix/change-title**: تغییر header و footer ماشین حساب برای ایجاد conflict.
 - شاخه‌ی **hotfix**: برطرف کردن سریع باگ‌های کوچک.
-- شاخه‌ی **gh-pages**:
+- شاخه‌ی **gh-pages**: برای deploy در GitHub Pages با استفاده از دستور `gh-pages` استفاده شده است.
 
 ### رفع conflict:
 1. برای اولین مورد، ما یک شاخه‌ی جدید از شاخه‌ی main ساختیم و اسم آن را `MohammadAminLotfi/fix/change-title` گذاشتیم. سپس یک شاخه‌ی دیگر از main ایجاد کردیم و اسم آن را `AmirMohammadFakhimi/feature/logic` گذاشتیم.  در هر دوی این شاخه‌ها header و footer را تغییر دادیم. در نهایت ابتدا `MohammadAminLotfi/fix/change-title` را با شاخه‌ی اصلی (main) merge کردیم (بدون conflict). سپس خواستیم `AmirMohammadFakhimi/feature/logic` را نیز  با شاخه‌ی اصلی (main) merge کنیم که به conflict خوردیم و آن را resolve کردیم.
 2. ...
 
 ### مستقرسازی:
-
+ابتدا با استفاده از دستور `gh-pages` برنامه را در GitHub Pages مستقر کردیم و سپس برای راه‌اندازی CD، از GitHub Actions استفاده کردیم که فایل مربوط به آن در `github/workflows/deployment.yml.` موجود است. در آن ابتدا به ازای هر push، آن action اجرا می‌شود و سپس مراحل deploy طی می‌شود.
 
 ### سایر جزئیات:
 - شاخه‌ی main همان‌طور که گفته شد، محافظت شده است. این کار از طریق منوی `Settings -> Branches` انجام شده است.
