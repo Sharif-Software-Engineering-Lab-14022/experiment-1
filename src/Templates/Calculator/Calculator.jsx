@@ -30,6 +30,11 @@ const Calculator = () => {
             <CalculatorMonitor currentOperand={currentOperand} prevOperand={prevOperand} operation={operation}/>
             <div className="grid grid-cols-4 gap-4 w-full">
                 <button
+                    onClick={() => {
+                        setCurrentOperand(undefined)
+                        setPrevOperand(undefined)
+                        setOperation(undefined)
+                    }}
                     className="col-span-2 flex item-center justify-center bg-gray-300 hover:bg-gray-400 p-4 rounded-[10px] text-xl">
                     AC
                 </button>
