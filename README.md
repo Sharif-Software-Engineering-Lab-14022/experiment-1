@@ -48,9 +48,13 @@ It's the first experiment of Software Engineering Lab course in Spring 2024 at S
 ### منظور از stage یا همان index چیست؟ دستور stash چه کاری را انجام می‌دهد؟
 
 - این مورد یک مرحله بین workspace و repository است که کار اصلی آن set up و ترکیب کردن تمام تغییراتی است که تا آن لحظه داده شده تا آن‌ها آماده‌ی commit شدن در repository شوند. ([منبع](https://www.geeksforgeeks.org/git-index))
--  از این دستور برای ذخیره کردن تغییرات commit نشده (staged و unstaged) استفاده می‌کنیم. سپس پروژه به آخرین commit بازمی‌گردد. حال می‌توانیم کار دلخواهمان را انجام دهیم و در نهایت تغییر ذخیره شده را pop کنیم (همانند stack عمل می‌کند.) و آن تغییرات به روی پروژه‌ی حاضر، اعمال شوند. ([منبع](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+-  از این دستور برای ذخیره کردن تغییرات commit نشده (staged و unstaged) استفاده می‌کنیم. سپس پروژه به آخرین commit بازمی‌گردد. حال می‌توانیم کار دلخواهمان را انجام دهیم و در نهایت تغییر ذخیره شده را pop کنیم (همانند stack عمل می‌کند.) و آن تغییرات به روی پروژه‌ی حاضر، اعمال شوند. ([منبع](https://www.atlassian.com/git/tutorials/saving-changes/git-stash))
 
 ## 6
 ### مفهوم snapshot به چه معناست؟ ارتباط آن با commit چیست؟ (راهنمایی: [لینک](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs))
 
 مفهوم snapshot یعنی یک state خاص وضعیت از پروژه. با توجه به این تعریف، هر commit یک snapshot است.
+
+## 7
+### تفاوت‌های local repository و remote repository چیست؟
+خود remote repository به روی یک محیط مشترک که اعضای تیم ایجاد به آن دسترسی دارند، قرار گرفته است، برای مثال ابر، GitHub، سرور خود شرکت یا ... در حالی که local repository به روی دستگاه هر عضو تیم به صورت جداگانه و local قرار دارد. عملاً برای همکاری با اعضای تیم، نیاز به یک remote repository است ولی وقتی یک نفر تنهایی به روی یک پروژه کار می‌کند، نیازی به remote repository ندارد. ([منبع](https://nulab.com/learn/software-development/git-tutorial/git-basics/repositories/remote-repositories-vs-local-repositories)) 
