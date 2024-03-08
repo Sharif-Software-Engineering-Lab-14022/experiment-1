@@ -4,7 +4,7 @@ const NumberButton = ({number, currentOperand, setCurrentOperand, customClasses}
             onClick={() => {
                 const currentOperandString = currentOperand?.toString()
                 if (currentOperand) {
-                    if (number === 0 && currentOperandString === '0' || currentOperand === 0)
+                    if (number === 0 && currentOperandString === '0')
                         return
                     if (number === '.' && currentOperandString.includes('.'))
                         return
