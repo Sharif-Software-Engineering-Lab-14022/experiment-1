@@ -18,6 +18,13 @@ It's the first experiment of Software Engineering Lab course in Spring 2024 at S
 1. برای اولین مورد، ما یک شاخه‌ی جدید از شاخه‌ی main ساختیم و اسم آن را `MohammadAminLotfi/fix/change-title` گذاشتیم. سپس یک شاخه‌ی دیگر از main ایجاد کردیم و اسم آن را `AmirMohammadFakhimi/feature/logic` گذاشتیم.  در هر دوی این شاخه‌ها header و footer را تغییر دادیم. در نهایت ابتدا `MohammadAminLotfi/fix/change-title` را با شاخه‌ی اصلی (main) merge کردیم (بدون conflict). سپس خواستیم `AmirMohammadFakhimi/feature/logic` را نیز  با شاخه‌ی اصلی (main) merge کنیم که به conflict خوردیم و آن را resolve کردیم.
 2. ...
 
+### مستقرسازی:
+
+
+### سایر جزئیات:
+- شاخه‌ی main همان‌طور که گفته شد، محافظت شده است. این کار از طریق منوی `Settings -> Branches` انجام شده است.
+- تمام کارهای کد با استفاده از Pull Request مدیریت شده‌اند.
+
 ## Questions
 ### 1
 #### پوشه‌ی git. چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
