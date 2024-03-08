@@ -1,4 +1,3 @@
-
 const OperationButton = ({operation, dispatch}) => {
     return (
         <button
