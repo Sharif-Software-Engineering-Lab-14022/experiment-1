@@ -55,13 +55,15 @@ const Calculator = () => {
                 </button>
                 {['/', 7, 8, 9, '*', 4, 5, 6, '-', 1, 2, 3, '+'].map(el =>
                     typeof el === 'number'
-                        ? <NumberButton key={el} number={el} currentOperandSetter={setCurrentOperand}/>
+                        ? <NumberButton key={el} number={el} currentOperand={currentOperand}
+                                        setCurrentOperand={setCurrentOperand}/>
                         : <OperationButton key={el} operation={el} currentOperand={currentOperand}
                                            setPrevOperand={setPrevOperand} setCurrentOperand={setCurrentOperand}
                                            setOperation={setOperation} calculate={calculate}/>
                 )}
-                <NumberButton customClasses={'col-span-2'} number={0} currentOperandSetter={setCurrentOperand}/>
-                <NumberButton number={'.'} currentOperandSetter={setCurrentOperand}/>
+                <NumberButton customClasses={'col-span-2'} number={0} currentOperand={currentOperand}
+                              setCurrentOperand={setCurrentOperand}/>
+                <NumberButton number={'.'} currentOperand={currentOperand} setCurrentOperand={setCurrentOperand}/>
                 <button
                     onClick={() => {
                         if (currentOperand === undefined || prevOperand === undefined || operation === undefined)
